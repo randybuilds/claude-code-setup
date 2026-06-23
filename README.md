@@ -27,6 +27,26 @@ and margin without growing headcount.
 
 *(Sanitized: business-, client-, and personal-data skills are intentionally excluded. The generic, reusable core only.)*
 
+## The shared brain (memory bank)
+
+The `memory-bank/` folder is the context every agent reads so it never re-explains your project. One
+file routes everything — [`memory-bank/startHere.md`](memory-bank/startHere.md):
+
+- a **ranked table of contents** (the agent finds the right file instead of guessing),
+- a **🟢🟡🔴 size guide** (big files get read summary-first, not loaded whole),
+- **`sources_of_truth` frontmatter** (which file wins when two disagree).
+
+**Wire any agent to it** — each tool reads a startup file; point all of them at `startHere.md`:
+
+| Agent | Startup file | What it says |
+|---|---|---|
+| Claude Code | `CLAUDE.md` | "Mandatory first action: read `memory-bank/startHere.md`" |
+| Codex / Cursor | `AGENTS.md` | same |
+| Antigravity | `GEMINI.md` | same |
+
+`memory-bank/` ships with a small **fictional example project ("Beacon")** so you can see it work —
+replace it with your own files and keep the structure.
+
 ## Install
 
 ```bash

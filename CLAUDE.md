@@ -3,6 +3,13 @@
 A generic, project-agnostic starting point. Copy this into your repo root and adapt.
 The goal: make the agent fast *and* safe by encoding the few rules that actually prevent rework.
 
+## 🧠 Mandatory first action (every session)
+
+Read [`memory-bank/startHere.md`](./memory-bank/startHere.md) before anything else. It's the map to the
+whole project — the ranked path list, the file-size guide, and which file wins when two disagree. The
+agent that skips it starts from zero and re-asks what's already written down. (Codex/Cursor get the same
+instruction via `AGENTS.md`; Antigravity via `GEMINI.md` — one brain, every agent.)
+
 ## Questions rule
 
 Never ask an open-ended question when a best guess will do. Propose the most likely answer with a
