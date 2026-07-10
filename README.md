@@ -24,6 +24,7 @@ and margin without growing headcount.
 | `simplify` | Reuse/quality/efficiency cleanup pass on a diff |
 | `verify` | Adversarial "prove it works" audit of completed work |
 | `5-whys-fix` | Root-cause analysis → 3 solutions → review → fix → verify |
+| `update-memory-bank` | Keep the shared brain current — route the change, sync startHere + sources-of-truth, prune stale context |
 
 *(Sanitized: business-, client-, and personal-data skills are intentionally excluded. The generic, reusable core only.)*
 
