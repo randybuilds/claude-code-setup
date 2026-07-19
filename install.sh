@@ -49,7 +49,7 @@ copy() {
   echo "  ✓ $rel"
 }
 
-echo "Installing claude-code-setup into: $TARGET"
+echo "Installing agentic-friendly-template into: $TARGET"
 [[ $FORCE -eq 1 ]] && echo "(force: existing files WILL be overwritten)" || echo "(safe: existing files are preserved; use --force to overwrite)"
 
 copy ".claude/skills"

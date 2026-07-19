@@ -1,4 +1,4 @@
-# claude-code-setup
+# agentic-friendly-template
 
 The highest-leverage operating stack I run my businesses on — the exact skills, rules, and
 shared memory bank that let one operator run like a 30-person team. Build it on yourself first;
@@ -57,8 +57,8 @@ replace it with your own files and keep the structure.
 **Option A — try it as-is.** Clone and open in Claude Code; the skills and settings load automatically.
 
 ```bash
-git clone https://github.com/randybasics/claude-code-setup
-cd claude-code-setup
+git clone https://github.com/randybasics/agentic-friendly-template
+cd agentic-friendly-template
 claude            # /help now lists implement, plan-review, verify, simplify, 5-whys-fix, skill-factory
 ```
 
@@ -67,8 +67,8 @@ claude            # /help now lists implement, plan-review, verify, simplify, 5-
 into a target repo. Existing files are preserved unless you pass `--force`.
 
 ```bash
-git clone https://github.com/randybasics/claude-code-setup
-./claude-code-setup/install.sh /path/to/your-project
+git clone https://github.com/randybasics/agentic-friendly-template
+./agentic-friendly-template/install.sh /path/to/your-project
 ```
 
 Then start your own memory bank: copy `memory-bank/startHere.md` into your project and replace the
