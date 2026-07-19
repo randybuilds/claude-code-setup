@@ -37,13 +37,13 @@ file routes everything — [`memory-bank/startHere.md`](memory-bank/startHere.md
 - a **🟢🟡🔴 size guide** (big files get read summary-first, not loaded whole),
 - **`sources_of_truth` frontmatter** (which file wins when two disagree).
 
-**Wire any agent to it** — each tool reads a startup file; point all of them at `startHere.md`:
+**Wire any agent to it** — each tool reads a startup file, and all agent-agnostic rules (including
+the mandatory `startHere.md` read) live in one place, `AGENTS.md`, so there's nothing to keep in sync:
 
 | Agent | Startup file | What it says |
 |---|---|---|
-| Claude Code | `CLAUDE.md` | "Mandatory first action: read `memory-bank/startHere.md`" |
-| Codex / Cursor | `AGENTS.md` | same |
-| Antigravity | `GEMINI.md` | same |
+| Codex / Cursor | `AGENTS.md` | all cross-tool rules + "read `memory-bank/startHere.md` first" |
+| Claude Code | `CLAUDE.md` | `@AGENTS.md` import, plus Claude-specific notes only |
 
 `memory-bank/` ships with a small **fictional example project ("Beacon")** so you can see it work —
 replace it with your own files and keep the structure.
