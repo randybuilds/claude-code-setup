@@ -10,7 +10,7 @@
 #   ./install.sh --force /path/to/target-repo  # overwrite existing files in target
 #
 # What it copies:
-#   .claude/skills/     -> the 6 skills (auto-loaded by Claude Code)
+#   .claude/skills/     -> the 7 skills (auto-loaded by Claude Code)
 #   .claude/settings.json
 #   AGENTS.md CLAUDE.md   -> AGENTS.md holds all agent-agnostic rules; CLAUDE.md imports it via
 #                            @AGENTS.md and adds Claude-specific notes only
