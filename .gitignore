@@ -1,2 +1,29 @@
+# Local, machine-specific Claude Code settings — never commit
 .claude/settings.local.json
 .claude/worktrees/
+
+# Environment / secrets
+.env
+.env.*
+!.env.*.example
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Dependencies / build output
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Logs
+*.log
+npm-debug.log*

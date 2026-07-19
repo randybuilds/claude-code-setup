@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(gh:*)",
+      "Read",
+      "Glob",
+      "Grep"
+    ],
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(sudo:*)",
+      "Bash(git push:* --force*)",
+      "Bash(git push:* -f*)"
+    ]
+  },
+  "context": {
+    "include": [
+      "memory-bank/startHere.md",
+      ".claude/skills/*/SKILL.md"
+    ],
+    "exclude": [
+      "node_modules/**",
+      ".git/**"
+    ]
+  }
+}
