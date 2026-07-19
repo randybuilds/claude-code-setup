@@ -17,18 +17,8 @@
     "deny": [
       "Bash(rm -rf /*)",
       "Bash(sudo:*)",
-      "Bash(git push:* --force*)",
-      "Bash(git push:* -f*)"
-    ]
-  },
-  "context": {
-    "include": [
-      "memory-bank/startHere.md",
-      ".claude/skills/*/SKILL.md"
-    ],
-    "exclude": [
-      "node_modules/**",
-      ".git/**"
+      "Bash(git push* --force*)",
+      "Bash(git push* -f*)"
     ]
   }
 }
