@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # install.sh — graft this operating stack into another project.
 #
-# Copies the reusable payload (.claude/, and the three agent instruction files)
+# Copies the reusable payload (.claude/, and the two agent instruction files)
 # into a TARGET repo so its agents load the skills and read the same memory bank.
 # Your project's own files are never overwritten without --force.
 #
@@ -12,7 +12,8 @@
 # What it copies:
 #   .claude/skills/     -> the 6 skills (auto-loaded by Claude Code)
 #   .claude/settings.json
-#   CLAUDE.md AGENTS.md GEMINI.md   -> startup files pointing every agent at the memory bank
+#   AGENTS.md CLAUDE.md   -> AGENTS.md holds all agent-agnostic rules; CLAUDE.md imports it via
+#                            @AGENTS.md and adds Claude-specific notes only
 #
 # What it does NOT copy:
 #   memory-bank/  (that's YOUR project's brain — start it with `startHere.md` as the template)
@@ -53,9 +54,8 @@ echo "Installing claude-code-setup into: $TARGET"
 
 copy ".claude/skills"
 copy ".claude/settings.json"
-copy "CLAUDE.md"
 copy "AGENTS.md"
-copy "GEMINI.md"
+copy "CLAUDE.md"
 
 echo
 echo "Done. Next steps in $TARGET:"
